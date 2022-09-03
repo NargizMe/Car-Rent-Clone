@@ -1,0 +1,23 @@
+{
+  "name": "car-rent-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass assets/style/scss/main.scss -o assets/style/css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NargizMe/Car-Rent-Clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NargizMe/Car-Rent-Clone/issues"
+  },
+  "homepage": "https://github.com/NargizMe/Car-Rent-Clone#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
