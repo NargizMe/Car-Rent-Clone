@@ -1,9 +1,11 @@
-.btn{
+@import '../utils/variables';
+
+.button{
     display: flex;
     align-items: center;
     text-align: center;
     color: #FFFFFF;
-    background: #3563E9;
+    background: $primary-default-500;
     border-radius: 4px;
     height: 44px;
     gap: 8px;
@@ -11,7 +13,9 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 150%;
-    background: #3563E9;
     color: white;
     border: 0;
+}
+.button-light{
+    background: $information-default-500;
 }

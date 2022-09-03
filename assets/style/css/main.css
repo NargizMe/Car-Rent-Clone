@@ -16,7 +16,7 @@ p, h1, h2, h3, h4, h5, h6 {
 * {
   font-family: 'Plus Jakarta Sans', sans-serif; }
 
-.btn {
+.button {
   display: flex;
   align-items: center;
   text-align: center;
@@ -29,9 +29,11 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
-  background: #3563E9;
   color: white;
   border: 0; }
+
+.button-light {
+  background: #54A6FF; }
 
 .card {
   background: #FFFFFF;
@@ -197,3 +199,63 @@ footer {
       width: 120px; }
   .footer__bottom span {
     font-size: 12px; } }
+
+.app__main {
+  background-color: #F6F7F9; }
+  .app__main #app__main__hero {
+    padding: 32px 0; }
+    @media (max-width: 576px) {
+      .app__main #app__main__hero {
+        overflow-x: scroll; }
+        .app__main #app__main__hero .hero-row {
+          flex-wrap: nowrap !important; } }
+    .app__main #app__main__hero .hero__ads {
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+      position: relative; }
+      @media (max-width: 576px) {
+        .app__main #app__main__hero .hero__ads {
+          height: 255px; } }
+      .app__main #app__main__hero .hero__ads--image_wrapper {
+        height: 100%;
+        width: 100%; }
+        .app__main #app__main__hero .hero__ads--image_wrapper img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      .app__main #app__main__hero .hero__ads--content {
+        position: absolute;
+        left: 24px;
+        top: 24px; }
+        .app__main #app__main__hero .hero__ads--content h2 {
+          max-width: 300px;
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 48px;
+          color: #FFFFFF;
+          margin-bottom: 16px; }
+          @media (max-width: 576px) {
+            .app__main #app__main__hero .hero__ads--content h2 {
+              font-size: 16px;
+              line-height: 24px;
+              margin-bottom: 12px; } }
+        .app__main #app__main__hero .hero__ads--content p {
+          max-width: 300px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: #FFFFFF;
+          margin-bottom: 20px; }
+          @media (max-width: 576px) {
+            .app__main #app__main__hero .hero__ads--content p {
+              font-size: 12px;
+              line-height: 19.2px;
+              max-width: 222px;
+              margin-bottom: 16px; } }
+        .app__main #app__main__hero .hero__ads--content button {
+          margin-bottom: 16px; }
+    .app__main #app__main__hero .ads--1 {
+      background-color: #54A6FF; }
+    .app__main #app__main__hero .ads--2 {
+      background-color: #3563E9; }
