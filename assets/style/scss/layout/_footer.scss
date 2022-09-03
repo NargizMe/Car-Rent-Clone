@@ -1,0 +1,129 @@
+footer{
+  padding: 80px 60px 60px 60px;
+  background-color: white;
+
+  h1{
+    margin-left: 0;
+  }
+
+  .footer__top{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 50px;
+  }
+
+  .footer__line{
+    width: 100%;
+    border: 1px solid rgba(19, 19, 19, 0.16);
+    margin: 40px 0;
+  }
+
+  .footer__bottom{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer__top{
+  .footer-top__left{
+    width: 60%;
+    p{
+      width: 292px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -0.02em;
+      color: $footer-text-color;
+      margin-top: 16px;
+    }
+  }
+
+  .footer-top__right{
+    width: 40%;
+    display: flex;
+    //justify-content: space-between;
+    column-gap: 60px;
+    row-gap: 50px;
+    flex-wrap: wrap;
+
+    .footer__list{
+      width: 152px;
+      h3{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+        color: $secondary-default-500;
+        margin-bottom: 25px;
+      }
+
+      ul{
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        li{
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 150%;
+          letter-spacing: -0.02em;
+          color: $footer-text-color;
+        }
+      }
+    }
+  }
+}
+
+.footer__bottom{
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  column-gap: 13px;
+  row-gap: 32px;
+
+  span{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: $secondary-default-500;
+  }
+
+  .footer-bottom__right{
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+  }
+}
+
+@include for-phone-only{
+  footer{
+    padding: 24px;
+    background-color: transparent;
+  }
+
+  .footer__top {
+    .footer-top__left {
+      width: 100%;
+
+      p {
+        font-size: 12px;
+      }
+    }
+
+    .footer-top__right{
+      width: 100%;
+
+      .footer__list{
+        width: 120px;
+      }
+    }
+  }
+
+  .footer__bottom{
+
+    span{
+      font-size: 12px;
+    }
+  }
+}
