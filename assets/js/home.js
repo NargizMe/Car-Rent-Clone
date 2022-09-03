@@ -52,3 +52,22 @@ dropTime.addEventListener("click",function(){
     });
 });
 
+//WishList Click
+
+let wishListIcon = document.querySelectorAll(".empty-heart");
+
+wishListIcon.forEach((heart)=>{
+    heart.addEventListener("click",function(){
+        if (this.classList.contains("fa-regular")) {
+            this.classList.remove("fa-regular");
+            this.classList.add("fa-solid");
+            this.style.color = "red";
+        }
+        else{
+            this.classList.remove("fa-solid");
+            this.classList.add("fa-regular");
+            this.style.color = "black";
+        }
+    });
+})
+

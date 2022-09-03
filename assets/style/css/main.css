@@ -39,42 +39,56 @@ p, h1, h2, h3, h4, h5, h6 {
   background: #FFFFFF;
   border-radius: 10px;
   padding: 24px;
-  border: 1px solid red; }
-
-.container {
-  max-width: 1320px;
-  margin: 0 auto; }
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 100%; }
-
-.row > * {
-  max-width: 100%;
-  padding-right: 16px;
-  padding-left: 16px; }
-
-.col-3 {
-  width: 24.9999%; }
-
-.col-4 {
-  width: 33.33333%; }
-
-.col-6 {
-  width: 49.99999%; }
-
-.col-12 {
-  width: 100%; }
-
-.col-8 {
-  width: 66.666%; }
-
-@media (max-width: 992px) {
-  .col-md-12 {
-    width: 100%; }
-  .col-md-6 {
-    width: 50%; } }
+  border: none;
+  margin-bottom: 32px; }
+  .card-title-wishlist {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline; }
+    .card-title-wishlist h5 {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px; }
+    .card-title-wishlist span {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 21px;
+      color: #90A3BF; }
+    .card-title-wishlist i {
+      font-size: 24px; }
+  .card-image {
+    display: flex;
+    justify-content: center;
+    padding: 0px 12px;
+    margin-top: 64px; }
+    .card-image img {
+      width: 100%;
+      height: 100%; }
+  .card-icons {
+    margin-top: 66px;
+    display: flex;
+    justify-content: space-between; }
+    .card-icons i {
+      color: #90A3BF; }
+    .card-icons span {
+      color: #90A3BF; }
+  .card-price_btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 26px; }
+    .card-price_btn .price {
+      font-weight: 700;
+      line-height: 25.2px;
+      font-size: 20px; }
+    .card-price_btn .per-day {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 17.64px;
+      color: #90A3BF; }
+    .card-price_btn p {
+      font-weight: 600;
+      line-height: 17.64px;
+      color: #90A3BF; }
 
 nav {
   display: flex;
@@ -319,3 +333,23 @@ footer {
           left: 50%;
           top: 50%;
           transform: translate(-50%, -50%); } }
+  .app__main #app__main__popular-cars {
+    padding-bottom: 42px; }
+    .app__main #app__main__popular-cars .popular-car-title__row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px; }
+      .app__main #app__main__popular-cars .popular-car-title__row span {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20.16px;
+        color: #90A3BF; }
+      .app__main #app__main__popular-cars .popular-car-title__row a {
+        color: #3563E9;
+        font-weight: 600;
+        line-height: 20.16px; }
+    @media (max-width: 576px) {
+      .app__main #app__main__popular-cars .popular-cars__row {
+        display: flex;
+        flex-wrap: nowrap !important;
+        overflow-x: scroll; } }
