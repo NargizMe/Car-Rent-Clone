@@ -63,4 +63,26 @@
             color: $secondary-light-300;
         }
     }
+    //Recommended card responsive
+    @include for-phone-only{
+        .card-image-icon_wrapper{
+            margin-top: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .card-image-icon_wrapper .card-image{
+            margin-top: 0;
+            img{
+                width: 142px;
+            }
+        }
+        .card-image-icon_wrapper .card-icons{
+            margin-top: 0;
+            display: block;
+            &__item{
+                margin-bottom: 12px;
+            }
+        }
+    }
 }
