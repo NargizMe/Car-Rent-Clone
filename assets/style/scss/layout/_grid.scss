@@ -5,10 +5,16 @@
   .row{
     display: flex;
     flex-wrap: wrap;
-    gap: 32px;
+    max-width: 100%;
+  }
+  .row>*{
+    max-width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
   }
   .col-3{
-    width: 23%;
+    width: 24.9999%;
+
   }
   .col-4{
     width: 33.33333%;
