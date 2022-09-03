@@ -11,3 +11,32 @@ ul {
 
 * {
   font-family: 'Plus Jakarta Sans', sans-serif; }
+
+.container {
+  width: 1320px;
+  margin: 0 auto; }
+
+.row {
+  display: flex;
+  flex-wrap: wrap; }
+
+.col-3 {
+  width: 24.99999%; }
+
+.col-4 {
+  width: 33.33333%; }
+
+.col-6 {
+  width: 49.99999%; }
+
+.col-12 {
+  width: 100%; }
+
+.col-8 {
+  width: 66.666%; }
+
+@media (min-width: 900px) {
+  .col-md-12 {
+    width: 100%; }
+  .col-md-6 {
+    width: 50%; } }
