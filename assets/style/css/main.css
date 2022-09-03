@@ -86,6 +86,21 @@ p, h1, h2, h3, h4, h5, h6 {
       font-weight: 600;
       line-height: 17.64px;
       color: #90A3BF; }
+  @media (max-width: 576px) {
+    .card .card-image-icon_wrapper {
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+    .card .card-image-icon_wrapper .card-image {
+      margin-top: 0; }
+      .card .card-image-icon_wrapper .card-image img {
+        width: 142px; }
+    .card .card-image-icon_wrapper .card-icons {
+      margin-top: 0;
+      display: block; }
+      .card .card-image-icon_wrapper .card-icons__item {
+        margin-bottom: 12px; } }
 
 nav {
   display: flex;
