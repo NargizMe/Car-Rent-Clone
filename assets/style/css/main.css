@@ -61,9 +61,6 @@ p, h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     padding: 0px 12px;
     margin-top: 64px; }
-    .card-image img {
-      width: 100%;
-      height: 100%; }
   .card-icons {
     margin-top: 66px;
     display: flex;
@@ -333,23 +330,49 @@ footer {
           left: 50%;
           top: 50%;
           transform: translate(-50%, -50%); } }
-  .app__main #app__main__popular-cars {
-    padding-bottom: 42px; }
-    .app__main #app__main__popular-cars .popular-car-title__row {
+  .app__main #app__main__popular-cars .popular-car-title__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px; }
+    .app__main #app__main__popular-cars .popular-car-title__row span {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20.16px;
+      color: #90A3BF; }
+    .app__main #app__main__popular-cars .popular-car-title__row a {
+      color: #3563E9;
+      font-weight: 600;
+      line-height: 20.16px; }
+  @media (max-width: 576px) {
+    .app__main #app__main__popular-cars .popular-cars__row {
+      display: flex;
+      flex-wrap: nowrap !important;
+      overflow-x: scroll; } }
+  .app__main #app__main__recommended-cars {
+    padding-top: 12px;
+    padding-bottom: 64px; }
+    .app__main #app__main__recommended-cars .recommended-car_row {
       display: flex;
       justify-content: space-between;
       margin-bottom: 30px; }
-      .app__main #app__main__popular-cars .popular-car-title__row span {
+      .app__main #app__main__recommended-cars .recommended-car_row span {
         font-weight: 600;
         font-size: 16px;
         line-height: 20.16px;
         color: #90A3BF; }
-      .app__main #app__main__popular-cars .popular-car-title__row a {
+      .app__main #app__main__recommended-cars .recommended-car_row a {
         color: #3563E9;
         font-weight: 600;
         line-height: 20.16px; }
-    @media (max-width: 576px) {
-      .app__main #app__main__popular-cars .popular-cars__row {
-        display: flex;
-        flex-wrap: nowrap !important;
-        overflow-x: scroll; } }
+    .app__main #app__main__recommended-cars .showmore-row {
+      display: flex;
+      justify-content: center;
+      position: relative; }
+      .app__main #app__main__recommended-cars .showmore-row span {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 500;
+        line-height: 21px;
+        color: #90A3BF; }
