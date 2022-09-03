@@ -1,4 +1,3 @@
-
 //Media Query Mixins
 @mixin for-phone-only {
   @media (max-width: 576px) { @content; }
