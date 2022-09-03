@@ -15,7 +15,41 @@ ul {
 * {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
+.card {
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 24px;
+  border: 1px solid red; }
 
+.container {
+  width: 1320px;
+  margin: 0 auto; }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px; }
+
+.col-3 {
+  width: 23%; }
+
+.col-4 {
+  width: 33.33333%; }
+
+.col-6 {
+  width: 49.99999%; }
+
+.col-12 {
+  width: 100%; }
+
+.col-8 {
+  width: 66.666%; }
+
+@media (max-width: 900px) {
+  .col-md-12 {
+    width: 100%; }
+  .col-md-6 {
+    width: 50%; } }
 .btn {
   display: flex;
   align-items: center;

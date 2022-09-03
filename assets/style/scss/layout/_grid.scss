@@ -5,9 +5,10 @@
   .row{
     display: flex;
     flex-wrap: wrap;
+    gap: 32px;
   }
   .col-3{
-    width: 24.99999%;
+    width: 23%;
   }
   .col-4{
     width: 33.33333%;
