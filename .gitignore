@@ -1,3 +1,7 @@
+.idea
+.idea/*
+.idea/watcherTasks.xml
+.idea/workspace.xml
 # Default ignored files
 /shelf/
 /workspace.xml
