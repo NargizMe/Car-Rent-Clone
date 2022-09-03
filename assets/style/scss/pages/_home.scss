@@ -74,4 +74,80 @@
             background-color: $primary-default-500;
         }
     }
+
+    #app__main__pickdrop{
+        padding-bottom: 42px;
+        .pick__up{
+            @include for-phone-only{
+                margin-bottom: 32px;
+            }
+        }
+        .pick-drop-row{
+            position: relative;
+        }
+        .app__main__pickdrop--pick{
+            padding: 24px 48px 28px 48px;
+            @include for-phone-only{
+                padding: 16px;
+            }
+            background-color: white;
+            border-radius: 10px;
+            .form-check{
+                margin-bottom: 16px;
+            }
+            .location__date{
+                border-right: 1px solid #C3D4E9;
+            }
+            .inputWrap{
+                position: relative;
+            }
+            label{
+                font-weight: 600;
+                color: #1A202C;
+            }
+            span{
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+                color: #1A202C;
+            }
+            select,label{
+                width: 100%;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 15.12px;
+                color: #90A3BF;
+                border: none;
+                background:none;
+                margin: -5px;
+                cursor: pointer;
+            }
+            #pickDateInput,#pickTimeInput,#dropDateInput,#dropTimeInput{
+                visibility: hidden;
+                opacity: 0;
+                height: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+        .shuffle-btn-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button{
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+                padding: 27px 21px;
+                i{
+                    display: block;
+                }
+            }
+            @include for-phone-only{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+            }
+         }
+    }
 }
