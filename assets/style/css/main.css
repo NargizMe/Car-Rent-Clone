@@ -102,6 +102,9 @@ p, h1, h2, h3, h4, h5, h6 {
       .card .card-image-icon_wrapper .card-icons__item {
         margin-bottom: 12px; } }
 
+.hidden-card {
+  display: none; }
+
 nav {
   display: flex;
   justify-content: space-between;

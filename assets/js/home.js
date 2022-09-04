@@ -61,7 +61,7 @@ wishListIcon.forEach((heart)=>{
         if (this.classList.contains("fa-regular")) {
             this.classList.remove("fa-regular");
             this.classList.add("fa-solid");
-            this.style.color = "red";
+            this.style.color = "#ED3F3F";
         }
         else{
             this.classList.remove("fa-solid");
@@ -71,3 +71,37 @@ wishListIcon.forEach((heart)=>{
     });
 })
 
+//Show More Click
+let showMoreBtn = document.querySelector(".show-more-btn");
+let cards = document.querySelectorAll(".card");
+showMoreBtn.addEventListener("click",function(){
+    if (this.innerText.toLowerCase() == "show more") {
+        this.innerText = "Show Less";
+        cards.forEach((card)=>{
+            if (card.classList.contains("hidden-card")) {
+                card.style.display = "block";
+            }
+        });
+    }
+    else{
+        this.innerText = "Show More";
+        cards.forEach((card)=>{
+            if (card.classList.contains("hidden-card")) {
+                card.style.display = "none";                
+            }
+        });
+    }
+});
+
+//Switch Button Click
+let switchBtn = document.querySelector(".switch-btn");
+let pickUp = document.querySelector(".pick__up");
+let dropOff = document.querySelector(".drop__off");
+
+switchBtn.addEventListener("click",function(){
+    let pickInnerHTML = pickUp.innerHTML;
+    let dropOffInnerHTML = dropOff.innerHTML;
+
+    dropOff.innerHTML = pickInnerHTML;
+    pickUp.innerHTML = dropOffInnerHTML;
+});
