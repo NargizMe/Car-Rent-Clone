@@ -13,6 +13,9 @@ p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
 
+button {
+  border: none; }
+
 * {
   font-family: 'Plus Jakarta Sans', sans-serif; }
 
@@ -129,20 +132,26 @@ h2 {
   .header-icons .icons__container {
     border: 1px solid rgba(195, 212, 233, 0.4);
     border-radius: 50%;
-    padding: 13px; }
+    padding: 13px;
+    position: relative; }
     .header-icons .icons__container svg {
       width: 20px;
       color: #596780; }
+    .header-icons .icons__container img {
+      position: absolute;
+      top: 0; }
 
 @media (max-width: 576px) {
   h2 {
     margin: 0;
     font-size: 24px; }
-  nav .icons__container {
-    display: none; }
-  nav img {
-    width: 28px;
-    height: 28px; } }
+  nav {
+    padding: 32px 25px; }
+    nav .icons__container {
+      display: none; }
+    nav img {
+      width: 28px;
+      height: 28px; } }
 
 footer {
   padding: 80px 60px 60px 60px;
@@ -229,7 +238,9 @@ footer {
     .footer__top .footer-top__right .footer__list {
       width: 120px; }
   .footer__bottom span {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .footer__list:nth-child(2) {
+    order: 1; } }
 
 .app__main {
   background-color: #F6F7F9; }
@@ -290,6 +301,321 @@ footer {
       background-color: #54A6FF; }
     .app__main #app__main__hero .ads--2 {
       background-color: #3563E9; }
+
+
+.payment-container {
+  display: flex;
+  padding: 32px;
+  background-color: #F6F7F9;
+  column-gap: 32px;
+  row-gap: 32px;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap-reverse; }
+  .payment-container .payment-container__left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    border-radius: 10px; }
+  .payment-container .payment-card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 10px; }
+  .payment-container .payment-card__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end; }
+    .payment-container .payment-card__head h3 {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      letter-spacing: -0.03em;
+      color: #1A202C; }
+    .payment-container .payment-card__head span {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: -0.02em;
+      color: #90A3BF; }
+  .payment-container label {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 385px; }
+    .payment-container label span {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -0.02em;
+      color: #1A202C;
+      margin-bottom: 16px; }
+    .payment-container label svg {
+      position: absolute;
+      width: 13px;
+      color: #90A3BF;
+      right: 8%;
+      top: 64%; }
+    .payment-container label input, .payment-container label select {
+      background: #F6F7F9;
+      border: none;
+      border-radius: 10px;
+      padding: 16px 32px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+      -moz-appearance: none; }
+  .payment-container .payment-card .pick-drop {
+    display: flex;
+    align-items: center;
+    margin: 32px 0 24px 0;
+    position: relative; }
+    .payment-container .payment-card .pick-drop span {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -0.02em;
+      color: #1A202C;
+      margin-left: 8px; }
+    .payment-container .payment-card .pick-drop .pick-selected {
+      display: none;
+      position: absolute; }
+    .payment-container .payment-card .pick-drop .drop-selected {
+      display: none;
+      position: absolute; }
+  .payment-container .payment-card .payment-card__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 32px;
+    grid-row-gap: 24px;
+    margin-top: 32px; }
+  .payment-container .payment-card button {
+    padding: 16px 32px;
+    top: 272px;
+    background: #3563E9;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 32px 0 34px 0; }
+  .payment-container .payment-card .safety-icon-container {
+    position: relative; }
+    .payment-container .payment-card .safety-icon-container .second-icon {
+      position: absolute;
+      left: 13px;
+      top: 5px; }
+  .payment-container .payment-card h4 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: #1A202C;
+    margin: 17px 0 8px 0; }
+  .payment-container .payment-card .confirmation-span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: #90A3BF; }
+  .payment-container .credit-card {
+    background: #F6F7F9;
+    border-radius: 10px;
+    padding: 24px;
+    margin-top: 24px; }
+    .payment-container .credit-card input {
+      background-color: white; }
+  .payment-container .credit-card__type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .payment-container .credit-card__type div {
+      display: flex;
+      align-items: center; }
+      .payment-container .credit-card__type div img {
+        height: 20px;
+        margin-right: 8px; }
+      .payment-container .credit-card__type div span {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+        color: #1A202C; }
+      .payment-container .credit-card__type div input {
+        width: 20px;
+        height: 20px;
+        margin-right: 23px; }
+    .payment-container .credit-card__type img {
+      height: 20px; }
+  .payment-container .payment-container__right .image-container {
+    display: flex;
+    align-items: center;
+    margin: 32px 0; }
+    .payment-container .payment-container__right .image-container img {
+      margin-right: 16px; }
+    .payment-container .payment-container__right .image-container div h5 {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 150%;
+      letter-spacing: -0.03em;
+      color: #1A202C; }
+    .payment-container .payment-container__right .image-container div svg {
+      color: #FBAD39; }
+    .payment-container .payment-container__right .image-container div svg:nth-child(6) {
+      color: #90A3BF; }
+    .payment-container .payment-container__right .image-container div span {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: -0.02em;
+      color: #596780;
+      margin-left: 10px; }
+  .payment-container .payment-container__right .line {
+    width: 100%;
+    border: 1px solid rgba(195, 212, 233, 0.4); }
+  .payment-container .payment-container__right .rental-info .rental-info__top div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0; }
+    .payment-container .payment-container__right .rental-info .rental-info__top div span:nth-child(1) {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -0.02em;
+      color: #90A3BF; }
+    .payment-container .payment-container__right .rental-info .rental-info__top div span:nth-child(2) {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -0.02em;
+      color: #1A202C;
+      margin: 0; }
+  .payment-container .payment-container__right .rental-info .rental-input-container {
+    position: relative;
+    margin: 32px 0; }
+    .payment-container .payment-container__right .rental-info .rental-input-container input {
+      background: #F6F7F9;
+      border: none;
+      border-radius: 10px;
+      padding: 16px 32px;
+      width: 100%; }
+    .payment-container .payment-container__right .rental-info .rental-input-container span {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -0.02em;
+      color: #1A202C;
+      position: absolute;
+      right: 8%;
+      top: 25%; }
+  .payment-container .payment-container__right .rental-info .rental-info__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .payment-container .payment-container__right .rental-info .rental-info__bottom .rental-car__price {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 40px;
+      color: #1A202C; }
+
+@media (max-width: 992px) {
+  .payment-container {
+    padding: 24px; }
+    .payment-container label {
+      width: 100%; }
+      .payment-container label span {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+        color: #1A202C; }
+      .payment-container label input, .payment-container label select {
+        padding: 18px 24px; }
+    .payment-container .payment-card__head {
+      align-items: start; }
+      .payment-container .payment-card__head h3 {
+        font-size: 16px; }
+      .payment-container .payment-card__head span {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+        color: #90A3BF; }
+    .payment-container .payment-card {
+      padding: 16px; }
+      .payment-container .payment-card .payment-card__info {
+        grid-template-columns: 1fr; }
+      .payment-container .payment-card button {
+        padding: 10px 16px;
+        font-size: 12px;
+        line-height: 15px;
+        margin: 24px 0 34px 0;
+        border-radius: 4px; }
+      .payment-container .payment-card h4 {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+        color: #1A202C;
+        margin: 13px 0 4px 0; }
+      .payment-container .payment-card .confirmation-span {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+        color: #90A3BF; }
+    .payment-container .credit-card {
+      padding: 10px 16px; }
+    .payment-container .credit-card__type div span {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 150%;
+      letter-spacing: -0.02em;
+      color: #1A202C; }
+    .payment-container .credit-card__type div input {
+      width: 13px;
+      height: 13px; }
+    .payment-container .credit-card__type img {
+      height: 16px; }
+    .payment-container .payment-container__right .image-container {
+      margin: 24px 0; }
+      .payment-container .payment-container__right .image-container div h5 {
+        font-size: 20px;
+        line-height: 140%;
+        letter-spacing: -0.03em; }
+      .payment-container .payment-container__right .image-container div svg {
+        color: #FBAD39;
+        width: 10px; }
+      .payment-container .payment-container__right .image-container div svg:nth-child(6) {
+        color: #90A3BF; }
+      .payment-container .payment-container__right .image-container div span {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+        color: #596780;
+        display: block;
+        margin-left: 0; }
+    .payment-container .payment-container__right .rental-info .rental-info__top div {
+      margin: 12px 0; }
+      .payment-container .payment-container__right .rental-info .rental-info__top div span:nth-child(1) {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+        color: #90A3BF; }
+    .payment-container .payment-container__right .rental-info .rental-input-container {
+      margin: 24px 0; }
+      .payment-container .payment-container__right .rental-info .rental-input-container span {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+        color: #1A202C; }
+    .payment-container .payment-container__right .rental-info .rental-info__bottom .rental-car__price {
+      font-size: 20px; } }
+
   .app__main #app__main__pickdrop {
     padding-bottom: 42px; }
     @media (max-width: 576px) {

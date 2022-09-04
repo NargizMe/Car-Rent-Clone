@@ -11,10 +11,6 @@
             href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,500;0,600;1,500;1,600&family=Permanent+Marker&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
             rel="stylesheet">
     <link rel="stylesheet" href="./assets/style/css/main.css">
-<!--    <link-->
-<!--        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"-->
-<!--        rel="stylesheet"-->
-<!--    />-->
     <title>Rent Car | Payment</title>
 </head>
 <body>
@@ -27,14 +23,245 @@
                 </div>
                 <div class="icons__container">
                     <i class="fa-solid fa-bell"></i>
+                    <img src="assets/media/payment/notif.svg"/>
                 </div>
                 <div class="icons__container">
                     <i class="fa-solid fa-gear"></i>
                 </div>
-                <img src="./assets/images/headerGuy.svg" />
+                <img src="assets/media/payment/headerGuy.svg" />
             </div>
         </nav>
     </header>
+    <main class="payment-container">
+        <div class="payment-container__left">
+            <div class="payment-card">
+                <div class="payment-card__head">
+                    <div>
+                        <h3>Billing Info</h3>
+                        <span>Please enter your billing info</span>
+                    </div>
+                    <span>Step 1 of 4</span>
+                </div>
+                <div class="payment-card__info">
+                    <label for="name">
+                        <span>Name</span>
+                        <input id="name" type="text" name="name" placeholder="Your name"/>
+                    </label>
+                    <label for="number">
+                        <span>Phone Number</span>
+                        <input id="number" type="text" name="number" placeholder="Phone number"/>
+                    </label>
+                    <label for="address">
+                        <span>Address</span>
+                        <input id="address" type="text" name="address" placeholder="Address"/>
+                    </label>
+                    <label for="city">
+                        <span>Town / City</span>
+                        <input id="city" type="text" name="city" placeholder="Town or city"/>
+                    </label>
+                </div>
+            </div>
+            <div class="payment-card">
+                <div class="payment-card__head">
+                    <div>
+                        <h3>Rental Info</h3>
+                        <span>Please select your rental date</span>
+                    </div>
+                    <span>Step 2 of 4</span>
+                </div>
+                <div class="pick pick-drop">
+                    <img class="pick-unSelected" src="./assets/media/payment/dropOffMark.svg"/>
+                    <img class="pick-selected" src="./assets/media/payment/pickUpMark.svg"/>
+                    <span>Pick - Up</span>
+                </div>
+                <div class="payment-card__info">
+                    <label for="locations-pick">
+                        <span>Locations</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                        <select id="locations-pick" name="locations-pick">
+                            <option>Select your city</option>
+                        </select>
+                    </label>
+                    <label for="date-pick">
+                        <span>Date</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                        <select id="date-pick" name="date-pick">
+                            <option>Select your date</option>
+                        </select>
+                    </label>
+                    <label for="time-pick">
+                        <span>Time</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                        <select id="time-pick" name="time-pick">
+                            <option>Select your time</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="drop pick-drop">
+                    <img class="drop-unSelected" src="./assets/media/payment/dropOffMark.svg"/>
+                    <img class="drop-selected" src="./assets/media/payment/pickUpMark.svg"/>
+                    <span>Drop - Off</span>
+                </div>
+                <div class="payment-card__info">
+                    <label for="locations-drop">
+                        <span>Locations</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                        <select id="locations-drop" name="locations-drop">
+                            <option>Select your city</option>
+                        </select>
+                    </label>
+                    <label for="date-drop">
+                        <span>Date</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                        <select id="date-drop" name="date-drop">
+                            <option>Select your date</option>
+                        </select>
+                    </label>
+                    <label for="time-drop">
+                        <span>Time</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                        <select id="time-drop" name="time-drop">
+                            <option>Select your time</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <div class="payment-card">
+                <div class="payment-card__head">
+                    <div>
+                        <h3>Payment Method</h3>
+                        <span>Please enter your payment method</span>
+                    </div>
+                    <span>Step 3 of 4</span>
+                </div>
+                <div class="credit-card">
+                    <div class="credit-card__type">
+                        <div>
+                            <img src="./assets/media/payment/pickUpMark.svg"/>
+                            <span>Credit Card</span>
+                        </div>
+                        <img src="assets/media/payment/visa.png">
+                    </div>
+                    <div class="payment-card__info">
+                        <label for="cardNumber">
+                            <span>Card Number</span>
+                            <input id="cardNumber" type="text" name="cardNumber" placeholder="Card number"/>
+                        </label>
+                        <label for="number">
+                            <span>Expration Date</span>
+                            <input id="exprationDate" type="text" name="exprationDate" placeholder="DD / MM / YY"/>
+                        </label>
+                        <label for="cardHolder">
+                            <span>Card Holder</span>
+                            <input id="cardHolder" type="text" name="cardHolder" placeholder="Card holder"/>
+                        </label>
+                        <label for="cvc">
+                            <span>CVC</span>
+                            <input id="cvc" type="text" name="cvc" placeholder="CVC"/>
+                        </label>
+                    </div>
+                </div>
+                <div class="credit-card">
+                    <div class="credit-card__type">
+                        <div>
+                            <input type="radio" name="card-type"/>
+                            <span>PayPal</span>
+                        </div>
+                        <img src="assets/media/payment/payPal.png">
+                    </div>
+                </div>
+                <div class="credit-card">
+                    <div class="credit-card__type">
+                        <div>
+                            <input type="radio" name="card-type"/>
+                            <span>Bitcoin</span>
+                        </div>
+                        <img src="assets/media/payment/bitCoin.png">
+                    </div>
+                </div>
+            </div>
+            <div class="payment-card">
+                <div class="payment-card__head">
+                    <div>
+                        <h3>Confirmation</h3>
+                        <span>We are getting to the end. Just few clicks and your rental is ready!</span>
+                    </div>
+                    <span>Step 4 of 4</span>
+                </div>
+                <div class="credit-card">
+                    <div class="credit-card__type">
+                        <div>
+                            <input type="checkbox"/>
+                            <span>I agree with sending an Marketing and newsletter emails. No spam, promissed!</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="credit-card">
+                    <div class="credit-card__type">
+                        <div>
+                            <input type="checkbox"/>
+                            <span>I agree with our terms and conditions and privacy policy.</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="rent-a-car">Rent Now</button>
+                <div class="safety-icon-container">
+                    <img src="assets/media/payment/safetyIcon.svg" />
+                    <img class="second-icon" src="assets/media/payment/safetyIconCheck.svg" />
+                </div>
+                <h4>All your data are safe</h4>
+                <span class="confirmation-span">We are using the most advanced security to provide you the best experience ever.</span>
+            </div>
+        </div>
+        <div class="payment-container__right payment-card">
+            <div class="payment-card__head">
+                <div>
+                    <h3>Rental Summary</h3>
+                    <span>Prices may change depending on the length of the rental and the
+                        <br/>
+                        price of your rental car.</span>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="assets/media/payment/paymentCar.svg"/>
+                <div>
+                    <h5>Nissan GT - R</h5>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>440+ Reviewer</span>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="rental-info">
+                <div class="rental-info__top">
+                    <div>
+                        <span>Subtotal</span>
+                        <span>$80.00</span>
+                    </div>
+                    <div>
+                        <span>Tax</span>
+                        <span>$0</span>
+                    </div>
+                </div>
+                <div class="rental-input-container">
+                    <input type="text" placeholder="Apply promo code"/>
+                    <span>Apply now</span>
+                </div>
+                <div class="rental-info__bottom">
+                    <div class="payment-card__head">
+                        <div>
+                            <h3>Total Rental Price</h3>
+                            <span>Overall price and includes rental discount</span>
+                        </div>
+                    </div>
+                    <span class="rental-car__price">$80.00</span>
+                </div>
+            </div>
+        </div>
+    </main>
     <footer>
         <div class="footer__top">
             <div class="footer-top__left">
@@ -80,6 +307,7 @@
             </div>
         </div>
     </footer>
+    <script src="assets/js/payment.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"></script>
 </body>
 </html>

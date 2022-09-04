@@ -1,0 +1,413 @@
+@mixin paymentSpan($weight, $size, $color){
+  font-weight: $weight;
+  font-size: $size;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: $color;
+}
+
+.payment-container{
+  display: flex;
+  padding: 32px;
+  background-color: $main-background-color;
+  column-gap: 32px;
+  row-gap: 32px;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap-reverse;
+
+  .payment-container__left{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    border-radius: 10px;
+  }
+
+  .payment-card{
+    background-color: white;
+    padding: 24px;
+    border-radius: 10px;
+  }
+
+  .payment-card__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    h3{
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      letter-spacing: -0.03em;
+      color: $secondary-default-500;
+    }
+
+    span{
+      @include paymentSpan(500, 14px, $secondary-light-300);
+    }
+  }
+
+  label{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 385px;
+
+    span{
+      @include paymentSpan(600, 16px, $secondary-default-500);
+      margin-bottom: 16px;
+    }
+
+    svg{
+      position: absolute;
+      width: 13px;
+      color: $secondary-light-300;
+      right: 8%;
+      top: 64%;
+    }
+
+    input, select{
+      background: $main-background-color;
+      border: none;
+      border-radius: 10px;
+      padding: 16px 32px;
+
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+  }
+
+  .payment-card{
+    .pick-drop{
+      display: flex;
+      align-items: center;
+      margin: 32px 0 24px 0;
+      position: relative;
+
+      span{
+        @include paymentSpan(600, 16px, $secondary-default-500);
+        margin-left: 8px;
+      }
+
+      .pick-selected{
+        display: none;
+        position: absolute;
+      }
+      .drop-selected{
+        display: none;
+        position: absolute;
+      }
+    }
+
+    .payment-card__info{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 32px;
+      grid-row-gap: 24px;
+      margin-top: 32px;
+    }
+
+    button{
+      padding: 16px 32px;
+      top: 272px;
+      background: $primary-default-500;
+      border-radius: 10px;
+      color: white;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      margin: 32px 0 34px 0;
+    }
+
+    .safety-icon-container{
+      position: relative;
+
+      .second-icon{
+        position: absolute;
+        left: 13px;
+        top: 5px;
+      }
+    }
+
+    h4{
+      @include paymentSpan(600, 16px, $secondary-default-500);
+      margin: 17px 0 8px 0;
+    }
+
+    .confirmation-span{
+      @include paymentSpan(500, 14px, $secondary-light-300);
+    }
+  }
+
+  .credit-card{
+    background: $main-background-color;
+    border-radius: 10px;
+    padding: 24px;
+    margin-top: 24px;
+
+    input{
+      background-color: white;
+    }
+  }
+
+  .credit-card__type{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div{
+      display: flex;
+      align-items: center;
+
+      img{
+        height: 20px;
+        margin-right: 8px;
+      }
+
+      span{
+        @include paymentSpan(600, 16px, $secondary-default-500);
+      }
+
+      input{
+        width: 20px;
+        height: 20px;
+        margin-right: 23px;
+      }
+    }
+
+    img{
+      height: 20px;
+    }
+  }
+
+  .payment-container__right{
+    .image-container{
+      display: flex;
+      align-items: center;
+      margin: 32px 0;
+
+      img{
+        margin-right: 16px;
+      }
+
+      div{
+        h5{
+          font-weight: 700;
+          font-size: 32px;
+          line-height: 150%;
+          letter-spacing: -0.03em;
+          color: $secondary-default-500;
+        }
+
+        svg{
+          color: #FBAD39;
+        }
+
+        svg:nth-child(6){
+          color: $secondary-light-300;
+        }
+
+        span{
+          @include paymentSpan(500, 14px, $secondary-light-400);
+          margin-left: 10px;
+        }
+      }
+
+    }
+
+    .line{
+      width: 100%;
+      border: 1px solid rgba(195, 212, 233, 0.4);
+    }
+
+    .rental-info{
+      .rental-info__top{
+        div{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 24px 0;
+
+          span:nth-child(1){
+            @include paymentSpan(500, 16px, $secondary-light-300);
+          }
+
+          span:nth-child(2){
+            @include paymentSpan(600, 16px, $secondary-default-500);
+            margin: 0;
+          }
+        }
+      }
+
+      .rental-input-container{
+        position: relative;
+        margin: 32px 0;
+
+        input{
+          background: $main-background-color;
+          border: none;
+          border-radius: 10px;
+          padding: 16px 32px;
+          width: 100%;
+        }
+
+        span{
+          @include paymentSpan(600, 16px, $secondary-default-500);
+          position: absolute;
+          right: 8%;
+          top: 25%;
+        }
+      }
+
+      .rental-info__bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .rental-car__price{
+          font-weight: 700;
+          font-size: 32px;
+          line-height: 40px;
+          color: $secondary-default-500;
+        }
+      }
+    }
+  }
+}
+
+
+
+@include for-tablet-landscape-up{
+  .payment-container{
+    padding: 24px;
+
+    label{
+      width: 100%;
+
+      span{
+        @include paymentSpan(600, 14px, $secondary-default-500);
+      }
+
+      input, select{
+        padding: 18px 24px;
+      }
+    }
+
+    .payment-card__head{
+      align-items: start;
+
+      h3{
+        font-size: 16px;
+      }
+
+      span{
+        @include paymentSpan(500, 12px, $secondary-light-300);
+      }
+    }
+
+    .payment-card{
+      padding: 16px;
+
+      .payment-card__info{
+        grid-template-columns: 1fr;
+      }
+
+      button{
+        padding: 10px 16px;
+        font-size: 12px;
+        line-height: 15px;
+        margin: 24px 0 34px 0;
+        border-radius: 4px;
+      }
+
+      h4{
+        @include paymentSpan(600, 16px, $secondary-default-500);
+        margin: 13px 0 4px 0;
+      }
+
+      .confirmation-span{
+        @include paymentSpan(500, 12px, $secondary-light-300);
+      }
+    }
+
+    .credit-card{
+      padding: 10px 16px;
+    }
+
+    .credit-card__type{
+      div{
+        span{
+          @include paymentSpan(600, 12px, $secondary-default-500);
+        }
+
+        input{
+          width: 13px;
+          height: 13px;
+        }
+      }
+
+      img{
+        height: 16px;
+      }
+    }
+
+    .payment-container__right{
+      .image-container {
+        margin: 24px 0;
+
+        div {
+          h5 {
+            font-size: 20px;
+            line-height: 140%;
+            letter-spacing: -0.03em;
+          }
+
+          svg {
+            color: #FBAD39;
+            width: 10px;
+          }
+
+          svg:nth-child(6) {
+            color: $secondary-light-300;
+          }
+
+          span {
+            @include paymentSpan(500, 12px, $secondary-light-400);
+            display: block;
+            margin-left: 0;
+          }
+        }
+      }
+
+      .rental-info{
+        .rental-info__top{
+          div{
+            margin: 12px 0;
+
+            span:nth-child(1){
+              @include paymentSpan(500, 12px, $secondary-light-300);
+            }
+          }
+        }
+
+        .rental-input-container{
+          margin: 24px 0;
+
+          span{
+            @include paymentSpan(600, 12px, $secondary-default-500);
+          }
+        }
+
+        .rental-info__bottom{
+          .rental-car__price{
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
