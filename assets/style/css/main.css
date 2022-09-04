@@ -446,7 +446,7 @@ footer {
     justify-content: center;
     align-items: center; }
     .home-nav .home_header__filter input {
-      display: none;
+      display: block;
       width: 492px;
       height: 44px;
       border-radius: 70px;
@@ -464,7 +464,7 @@ footer {
       position: absolute;
       right: 22px; }
     .home-nav .home_header__filter * {
-      display: none; }
+      display: block; }
 
 @media (max-width: 768px) {
   .home-nav {
@@ -1066,8 +1066,11 @@ footer {
     line-height: 150%;
     letter-spacing: -0.02em;
     color: #90A3BF; }
+<<<<<<< HEAD
+=======
   .payment-container .multiple-payment-card .payment-card__info {
     display: none; }
+>>>>>>> bbe2196d1539a39fcc67463be5073c9608b6f3f7
   .payment-container .credit-card {
     background: #F6F7F9;
     border-radius: 10px;
@@ -1148,7 +1151,11 @@ footer {
       background: #F6F7F9;
       border: none;
       border-radius: 10px;
+<<<<<<< HEAD
+      padding: 16px 32px;
+=======
       padding: 16px 90px 16px 32px;
+>>>>>>> bbe2196d1539a39fcc67463be5073c9608b6f3f7
       width: 100%; }
     .payment-container .payment-container__right .rental-info .rental-input-container span {
       font-weight: 600;
