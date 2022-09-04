@@ -186,16 +186,33 @@
         justify-content: space-between;
         flex-grow: 1;
         width: 100%;
-        img {
+        div{
           max-width: 148px;
+          height: 124px;
+          border: 0;
+        }
+        div.selecedSlide{
+          border: 2px solid #3563E9;
+          padding:8px;
+          border-radius: 10px;
+        }
+        img {
+          height:100%;
+                max-width: 100%;
           background: #3563e9;
           background-image: url("../../detailImgs/CarSliderArrow&&Carbg.png");
           border-radius: 10px;
           cursor: pointer;
         }
         @include for-desktop-up{
+          div{
+            max-width: 148px;
+          height: 124px;
+
+          }
             img{
-                max-width: 96px;
+              height:100%;
+                max-width: 100%;
             }
         }
       }
@@ -341,7 +358,8 @@
             }
           }
           button{
-              height: auto;
+              height: 56px;
+              padding: 16px 32px;
               cursor: pointer;
           }
       }
