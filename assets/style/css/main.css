@@ -127,7 +127,6 @@ nav {
   padding: 40px 32px;
   align-items: center;
   background-color: white; }
-
   nav h2 {
     font-weight: 700;
     font-size: 32px;
@@ -339,20 +338,13 @@ footer {
         border-right: 1px solid #C3D4E9; }
       .app__main #app__main__pickdrop .app__main__pickdrop--pick .inputWrap {
         position: relative; }
-
-      .app__main #app__main__pickdrop .app__main__pickdrop--pick label {
-        font-weight: 600;
-        color: #1A202C; }
-
       .app__main #app__main__pickdrop .app__main__pickdrop--pick span {
         font-weight: 700;
         font-size: 16px;
         line-height: 24px;
         color: #1A202C; }
-
       .app__main #app__main__pickdrop .app__main__pickdrop--pick img {
         margin-right: 8px; }
-
       .app__main #app__main__pickdrop .app__main__pickdrop--pick select, .app__main #app__main__pickdrop .app__main__pickdrop--pick label {
         width: 100%;
         font-size: 12px;
@@ -363,13 +355,11 @@ footer {
         background: none;
         margin: -5px;
         cursor: pointer; }
-
       .app__main #app__main__pickdrop .app__main__pickdrop--pick .pickUp-span {
         font-weight: 600;
         color: #1A202C; }
       .app__main #app__main__pickdrop .app__main__pickdrop--pick .pickUpMark-wrapper {
         margin-bottom: 18px; }
-
       .app__main #app__main__pickdrop .app__main__pickdrop--pick #pickDateInput, .app__main #app__main__pickdrop .app__main__pickdrop--pick #pickTimeInput, .app__main #app__main__pickdrop .app__main__pickdrop--pick #dropDateInput, .app__main #app__main__pickdrop .app__main__pickdrop--pick #dropTimeInput {
         visibility: hidden;
         opacity: 0;
@@ -554,6 +544,8 @@ footer {
     line-height: 150%;
     letter-spacing: -0.02em;
     color: #90A3BF; }
+  .payment-container .multiple-payment-card .payment-card__info {
+    display: none; }
   .payment-container .credit-card {
     background: #F6F7F9;
     border-radius: 10px;
