@@ -259,6 +259,7 @@
           height: 16px;
         }
         p{
+          margin: 0;
           font-weight: 500;
           font-size: 14px;
           line-height: 18px;
@@ -397,6 +398,7 @@
         align-items: center;
         letter-spacing: -0.02em;
         color: #1A202C;
+        margin-bottom: 0;
       }
       div{
         margin-left: 12px;
@@ -517,7 +519,7 @@
       }
   }
   .popular-cars__row{
-      @include for-phone-only{
+      @include for-tablet-landscape-up{
           display: flex;
           flex-wrap: nowrap !important;
           overflow-x: scroll;
