@@ -101,15 +101,14 @@
             .inputWrap{
                 position: relative;
             }
-            label{
-                font-weight: 600;
-                color: #1A202C;
-            }
             span{
                 font-weight: 700;
                 font-size: 16px;
                 line-height: 24px;
                 color: #1A202C;
+            }
+            img{
+                margin-right: 8px;
             }
             select,label{
                 width: 100%;
@@ -121,6 +120,13 @@
                 background:none;
                 margin: -5px;
                 cursor: pointer;
+            }
+            .pickUp-span{
+                font-weight: 600;
+                color: #1A202C;
+            }
+            .pickUpMark-wrapper{
+                margin-bottom: 18px;
             }
             #pickDateInput,#pickTimeInput,#dropDateInput,#dropTimeInput{
                 visibility: hidden;

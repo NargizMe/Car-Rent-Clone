@@ -25,7 +25,6 @@
 </head>
 
 <body>
-    <header></header>
     <main class="app__main">
 
         <!-- Hero Section Start -->
@@ -67,12 +66,12 @@
                 <div class="row pick-drop-row">
                     <div class="col-lg-5">
                         <div class="app__main__pickdrop--pick pick__up">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="pickUpRadio" id="pickUpRadio">
-                                <label class="form-check-label" for="pickUpRadio">
+                              <div class="pickUpMark-wrapper">
+                                <img src="./assets/media/home/pickupMark.png" alt="pick up">
+                                <span class="pickUp-span">
                                     Pick - Up
-                                </label>
-                            </div>
+                                </span>
+                              </div>
                             <div class="row">
                                 <div class="col-lg-4 col-4 location__date">
                                     <span>Locations</span>
@@ -101,18 +100,18 @@
                         </div>
                     </div>
                     <div class="col-lg-2 shuffle-btn-wrapper">
-                        <button class="button">
+                        <button class="button switch-btn">
                             <i class="fa-solid fa-arrows-rotate"></i>
                         </button>
                     </div>
                     <div class="col-lg-5">
-                        <div class="app__main__pickdrop--pick">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="DropOffRadio" id="DropOffRadio">
-                                <label class="form-check-label" for="DropOffRadio">
+                        <div class="app__main__pickdrop--pick drop__off">
+                            <div class="pickUpMark-wrapper">
+                                <img src="./assets/media/home/dropOffMark.png" alt="drop off">
+                                <span class="pickUp-span">
                                     Drop - Off
-                                </label>
-                            </div>
+                                </span>
+                              </div>
                             <div class="row">
                                 <div class="col-lg-4 col-4 location__date">
                                     <span>Locations</span>
@@ -150,7 +149,7 @@
             <div class="container">
                 <div class="popular-car-title__row">
                     <span>Popular Car</span>
-                    <a href="#">View All</a>
+                    <a href="details.html">View All</a>
                 </div>
                 <div class="row popular-cars__row">
                     <div class="col-lg-3">
@@ -164,6 +163,7 @@
                             </div>
                             <div class="card-image">
                                 <img src="./assets/media/home/car1.png" alt="car-1">
+                                <div class="card-image-layer"></div>
                             </div>
                             <div class="card-icons">
                                 <div class="card-icons__item">
@@ -200,6 +200,7 @@
                             </div>
                             <div class="card-image">
                                 <img src="./assets/media/home/car2.png" alt="car-">
+                                <div class="card-image-layer"></div>
                             </div>
                             <div class="card-icons">
                                 <div class="card-icons__item">
@@ -237,6 +238,7 @@
                             </div>
                             <div class="card-image">
                                 <img src="./assets/media/home/car3.png" alt="car-3">
+                                <div class="card-image-layer"></div>
                             </div>
                             <div class="card-icons">
                                 <div class="card-icons__item">
@@ -273,6 +275,7 @@
                             </div>
                             <div class="card-image">
                                 <img src="./assets/media/home/car2.png" alt="car-4">
+                                <div class="card-image-layer"></div>
                             </div>
                             <div class="card-icons">
                                 <div class="card-icons__item">
@@ -325,6 +328,7 @@
                             <div class="card-image-icon_wrapper">
                                 <div class="card-image">
                                     <img src="./assets/media/home/recommended1.png" alt="car-1">
+                                    <div class="card-image-layer"></div>
                                 </div>
                                 <div class="card-icons">
                                     <div class="card-icons__item">
@@ -364,6 +368,7 @@
                             <div class="card-image-icon_wrapper">
                                 <div class="card-image">
                                     <img src="./assets/media/home/recommended2.png" alt="car-2">
+                                    <div class="card-image-layer"></div>
                                 </div>
                                 <div class="card-icons">
                                     <div class="card-icons__item">
@@ -403,6 +408,7 @@
                             <div class="card-image-icon_wrapper">
                             <div class="card-image">
                                 <img src="./assets/media/home/recommended3.png" alt="car-3">
+                                <div class="card-image-layer"></div>
                             </div>
                             <div class="card-icons">
                                 <div class="card-icons__item">
@@ -441,6 +447,7 @@
                             <div class="card-image-icon_wrapper">
                             <div class="card-image">
                                 <img src="./assets/media/home/recommended4.png" alt="car-4">
+                                <div class="card-image-layer"></div>
                             </div>
                             <div class="card-icons">
                                 <div class="card-icons__item">
@@ -480,6 +487,7 @@
                             <div class="card-image-icon_wrapper">
                             <div class="card-image">
                                 <img src="./assets/media/home/recommended5.png" alt="car-4">
+                                <div class="card-image-layer"></div>
                             </div>
                             <div class="card-icons">
                                 <div class="card-icons__item">
@@ -520,6 +528,7 @@
                             <div class="card-image-icon_wrapper">
                             <div class="card-image">
                                 <img src="./assets/media/home/recommended6.png" alt="car-6">
+                                <div class="card-image-layer"></div>
                             </div>
                             <div class="card-icons">
                                 <div class="card-icons__item">
@@ -559,6 +568,7 @@
                             <div class="card-image-icon_wrapper">
                             <div class="card-image">
                                 <img src="./assets/media/home/recommended5.png" alt="car-6">
+                                <div class="card-image-layer"></div>
                             </div>
                             <div class="card-icons">
                                 <div class="card-icons__item">
@@ -598,6 +608,7 @@
                             <div class="card-image-icon_wrapper">
                             <div class="card-image">
                                 <img src="./assets/media/home/recommended7.png" alt="car-7">
+                                <div class="card-image-layer"></div>
                             </div>
                             <div class="card-icons">
                                 <div class="card-icons__item">
@@ -624,9 +635,131 @@
                             </div>
                        </div>
                     </div>
+
+                    <!-- Hidden Cards -->
+                    <div class="col-lg-3">
+                        <div class="card hidden-card">
+                            <div class="card-title-wishlist">
+                                <div class="title-wrapper">
+                                    <h5>New MG ZS</h5>
+                                    <span>SUV</span>
+                                </div>
+                                <i class="fa-regular fa-heart empty-heart"></i>
+                            </div>
+                            <div class="card-image-icon_wrapper">
+                            <div class="card-image">
+                                <img src="./assets/media/home/recommended6.png" alt="car-6">
+                                <div class="card-image-layer"></div>
+                            </div>
+                            <div class="card-icons">
+                                <div class="card-icons__item">
+                                    <i class="fa-solid fa-gas-pump"></i>
+                                    <span>80L</span> 
+                                </div>
+                                <div class="card-icons__item">
+                                    <i class="fa-solid fa-chart-pie"></i>
+                                    <span>Manual</span> 
+                                </div>
+                                <div class="card-icons__item">
+                                    <i class="fa-solid fa-person"></i> 
+                                    <span>6 People</span> 
+                                </div>  
+                            </div>
+                            </div>
+                            <div class="card-price_btn">
+                                <div class="card-price">
+                                    <span class="price">$80.00/</span><span class="per-day"> day</span>
+                                </div>
+                                <div class="card-btn">
+                                    <button class="button">Rent Now</button>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="card hidden-card">
+                            <div class="card-title-wishlist">
+                                <div class="title-wrapper">
+                                    <h5>MG ZX Excite</h5>
+                                    <span>Hatchback</span>
+                                </div>
+                                <i class="fa-regular fa-heart empty-heart"></i>
+                            </div>
+                            <div class="card-image-icon_wrapper">
+                            <div class="card-image">
+                                <img src="./assets/media/home/recommended5.png" alt="car-6">
+                                <div class="card-image-layer"></div>
+                            </div>
+                            <div class="card-icons">
+                                <div class="card-icons__item">
+                                    <i class="fa-solid fa-gas-pump"></i>
+                                    <span>90L</span> 
+                                </div>
+                                <div class="card-icons__item">
+                                    <i class="fa-solid fa-chart-pie"></i>
+                                    <span>Manual</span> 
+                                </div>
+                                <div class="card-icons__item">
+                                    <i class="fa-solid fa-person"></i> 
+                                    <span>6 People</span> 
+                                </div>  
+                            </div>
+                            </div>
+                            <div class="card-price_btn">
+                                <div class="card-price">
+                                    <span class="price">$74.00/</span><span class="per-day"> day</span>
+                                </div>
+                                <div class="card-btn">
+                                    <button class="button">Rent Now</button>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="card hidden-card">
+                            <div class="card-title-wishlist">
+                                <div class="title-wrapper">
+                                    <h5>New MG ZS</h5>
+                                    <span>Hatchback</span>
+                                </div>
+                                <i class="fa-regular fa-heart empty-heart"></i>
+                            </div>
+                            <div class="card-image-icon_wrapper">
+                            <div class="card-image">
+                                <img src="./assets/media/home/recommended7.png" alt="car-7">
+                                <div class="card-image-layer"></div>
+                            </div>
+                            <div class="card-icons">
+                                <div class="card-icons__item">
+                                    <i class="fa-solid fa-gas-pump"></i>
+                                    <span>80L</span> 
+                                </div>
+                                <div class="card-icons__item">
+                                    <i class="fa-solid fa-chart-pie"></i>
+                                    <span>Manual</span> 
+                                </div>
+                                <div class="card-icons__item">
+                                    <i class="fa-solid fa-person"></i> 
+                                    <span>6 People</span> 
+                                </div>  
+                            </div>
+                            </div>
+                            <div class="card-price_btn">
+                                <div class="card-price">
+                                    <span class="price">$80.00/</span><span class="per-day"> day</span>
+                                </div>
+                                <div class="card-btn">
+                                    <button class="button">Rent Now</button>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+
                 </div>
                 <div class="showmore-row">
-                    <button class="button">Show More</button>
+                    <button class="button show-more-btn">Show More</button>
                     <span>120 Car</span>
                 </div>
             </div>
@@ -634,7 +767,51 @@
         <!-- Recommended Cars Section End -->
     </main>
     <footer>
-
+      <div class="container">
+          <div class="footer__top">
+            <div class="footer-top__left">
+                <h2>MORENT</h2>
+                <p>Our vision is to provide convenience and help increase your sales business.</p>
+            </div>
+            <div class="footer-top__right">
+                <div class="footer__list">
+                    <h3>About</h3>
+                    <ul>
+                        <li>How it works</li>
+                        <li>Featured</li>
+                        <li>Partnership</li>
+                        <li>Bussiness Relation</li>
+                    </ul>
+                </div>
+                <div class="footer__list">
+                    <h3>Community</h3>
+                    <ul>
+                        <li>Events</li>
+                        <li>Blog</li>
+                        <li>Podcast</li>
+                        <li>Invite a friend</li>
+                    </ul>
+                </div>
+                <div class="footer__list">
+                    <h3>Socials</h3>
+                    <ul>
+                        <li>Discord</li>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                        <li>Facebook</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__line"></div>
+        <div class="footer__bottom">
+            <span class="footer-bottom__left">©2022 MORENT. All rights reserved</span>
+            <div class="footer-bottom__right">
+                <span>Privacy & Policy</span>
+                <span>Terms & Condition</span>
+            </div>
+        </div>
+      </div>
     </footer>
 
     <script src="assets/js/home.js"></script>
