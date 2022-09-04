@@ -2,6 +2,7 @@ window.onload = function (){
     initAccordion();
     initFocus();
     checkValidation();
+    changeInnerText();
 }
 
 function initFocus(){
@@ -76,7 +77,7 @@ function initAccordion () {
     })
 }
 
-function  checkValidation(){
+function checkValidation(){
     const button = document.querySelector('.rent-a-car');
     const agreementCheckBox = document.querySelector('#agreement');
 
@@ -110,7 +111,7 @@ function  checkValidation(){
                 if(!select.value){
                     const emptyInput = document.querySelector(`select[name='${select.name}']`)
                     emptyInput.style.border = '2px solid tomato';
-                    window.scrollTo(0, 850);
+                    window.scrollTo(0, 1150);
                 }
             })
         }
@@ -119,4 +120,11 @@ function  checkValidation(){
         }
     })
 
+}
+
+function changeInnerText(){
+    let rentalSpan = document.querySelector('.rental-info__bottom').children[0].children[0].children[1];
+    window.addEventListener('resize', () => {
+        rentalSpan.innerText = window.screen.width <= 992? 'Overall price rental': 'Overall price and includes rental discount';
+    })
 }

@@ -628,7 +628,7 @@ footer {
       background: #F6F7F9;
       border: none;
       border-radius: 10px;
-      padding: 16px 32px;
+      padding: 16px 90px 16px 32px;
       width: 100%; }
     .payment-container .payment-container__right .rental-info .rental-input-container span {
       font-weight: 600;
