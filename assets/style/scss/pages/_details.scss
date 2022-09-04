@@ -3,6 +3,7 @@
     justify-content: end;
     align-items: flex-start;
     width: 100%;
+    position: relative;
   }
   // aside start
   .detail__aside {
@@ -55,6 +56,26 @@
       margin-left: 4px;
     }
   }
+  @include for-desktop-up{
+    .detail__aside{
+        width: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+  @include for-tablet-landscape-up  {
+    .detail__aside{
+        display: none;
+        width: 300px;
+        height: 100%;
+        padding: 32px;
+        max-width: none;
+        position: absolute;
+        z-index: 3;
+        background: #fff;
+        left: 0;
+    }
+  }
+  }
   // aside end
   // container start
   .detail__container {
@@ -64,6 +85,11 @@
     background-color: #f6f7f9;
     padding: 32px;
   }
+  @include for-desktop-up{
+    .detail__container{
+        max-width: 100%;
+    }
+}
   // container end
   // detail__cardbox_slider start
   #detail__cardbox_slider {
@@ -129,7 +155,17 @@
           border-radius: 10px;
           cursor: pointer;
         }
+        @include for-desktop-up{
+            img{
+                max-width: 96px;
+            }
+        }
       }
+    }
+    @include for-desktop-up{
+        .detail__card_slider{
+           width: 100%;
+        }
     }
     // slider end
     //detail_card_infobox start
@@ -205,6 +241,11 @@
           &:nth-child(2){
               margin-right: 42px;
           }
+          @include for-desktop-up{
+            &:nth-child(2){
+                margin-right: 24px;
+            }
+          }
           &:nth-child(even){
               font-weight: 600;
               text-align: right;
@@ -212,6 +253,11 @@
               justify-content: end;
           }
         }
+        @include for-desktop-up{
+            div{
+                font-size: 12px;
+            }
+          }
       }
       &__pricebox {
           display: flex;
@@ -235,12 +281,26 @@
               }
               
           }
+          @include for-desktop-up{
+            .presentPrice{
+                font-size: 20px;
+                span{
+                    font-size: 12px;
+                }
+            }
+          }
           .oldPrice{
               font-style: normal;
               font-weight: 700;
               font-size: 16px;
               line-height: 20px;
+              text-decoration-line: line-through;
               color: #90A3BF;
+          }
+          @include for-desktop-up{
+            .oldPrice{
+                font-size: 12px;
+            }
           }
           button{
               height: auto;
@@ -248,8 +308,18 @@
           }
       }
     }
+    @include for-desktop-up{
+        .detail_card_infobox{
+           width: 100%;
+        }
+    }
     //detail_card_infobox end
   }
+  @include for-desktop-up{
+    #detail__cardbox_slider{
+       flex-direction: column;
+    }
+}
   // detail__cardbox_slider end
   // detail_reviews start
   #detail_reviews{
@@ -346,6 +416,9 @@
         line-height: 200%;
         letter-spacing: -0.02em;
         color: #596780;
+        height: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
     &>button{

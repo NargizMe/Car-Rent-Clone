@@ -501,6 +501,7 @@ footer .footer__bottom {
   justify-content: end;
   align-items: flex-start;
   width: 100%;
+  position: relative;
 }
 
 .detail__aside {
@@ -554,6 +555,26 @@ footer .footer__bottom {
   margin-left: 4px;
 }
 
+@media (max-width: 1200px) {
+  .detail__aside {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+@media (max-width: 1200px) and (max-width: 992px) {
+  .detail__aside {
+    display: none;
+    width: 300px;
+    height: 100%;
+    padding: 32px;
+    max-width: none;
+    position: absolute;
+    z-index: 3;
+    background: #fff;
+    left: 0;
+  }
+}
 .detail__container {
   height: 100%;
   max-width: 75%;
@@ -562,6 +583,11 @@ footer .footer__bottom {
   padding: 32px;
 }
 
+@media (max-width: 1200px) {
+  .detail__container {
+    max-width: 100%;
+  }
+}
 #detail__cardbox_slider {
   display: flex;
   justify-content: space-between;
@@ -626,6 +652,16 @@ footer .footer__bottom {
   background-image: url("../../detailImgs/CarSliderArrow&&Carbg.png");
   border-radius: 10px;
   cursor: pointer;
+}
+@media (max-width: 1200px) {
+  #detail__cardbox_slider .detail__card_slider .slider_item_box img {
+    max-width: 96px;
+  }
+}
+@media (max-width: 1200px) {
+  #detail__cardbox_slider .detail__card_slider {
+    width: 100%;
+  }
 }
 #detail__cardbox_slider .detail_card_infobox {
   flex-grow: 1;
@@ -702,11 +738,21 @@ footer .footer__bottom {
 #detail__cardbox_slider .detail_card_infobox__category_row div:nth-child(2) {
   margin-right: 42px;
 }
+@media (max-width: 1200px) {
+  #detail__cardbox_slider .detail_card_infobox__category_row div:nth-child(2) {
+    margin-right: 24px;
+  }
+}
 #detail__cardbox_slider .detail_card_infobox__category_row div:nth-child(even) {
   font-weight: 600;
   text-align: right;
   color: #596780;
   justify-content: end;
+}
+@media (max-width: 1200px) {
+  #detail__cardbox_slider .detail_card_infobox__category_row div {
+    font-size: 12px;
+  }
 }
 #detail__cardbox_slider .detail_card_infobox__pricebox {
   display: flex;
@@ -730,18 +776,42 @@ footer .footer__bottom {
   line-height: 20px;
   align-self: end;
 }
+@media (max-width: 1200px) {
+  #detail__cardbox_slider .detail_card_infobox__pricebox .presentPrice {
+    font-size: 20px;
+  }
+  #detail__cardbox_slider .detail_card_infobox__pricebox .presentPrice span {
+    font-size: 12px;
+  }
+}
 #detail__cardbox_slider .detail_card_infobox__pricebox .oldPrice {
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+  text-decoration-line: line-through;
   color: #90A3BF;
+}
+@media (max-width: 1200px) {
+  #detail__cardbox_slider .detail_card_infobox__pricebox .oldPrice {
+    font-size: 12px;
+  }
 }
 #detail__cardbox_slider .detail_card_infobox__pricebox button {
   height: auto;
   cursor: pointer;
 }
+@media (max-width: 1200px) {
+  #detail__cardbox_slider .detail_card_infobox {
+    width: 100%;
+  }
+}
 
+@media (max-width: 1200px) {
+  #detail__cardbox_slider {
+    flex-direction: column;
+  }
+}
 #detail_reviews {
   margin-top: 58px;
   background: #FFFFFF;
@@ -832,6 +902,9 @@ footer .footer__bottom {
   line-height: 200%;
   letter-spacing: -0.02em;
   color: #596780;
+  height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #detail_reviews > button {
   padding: 10px 20px;
