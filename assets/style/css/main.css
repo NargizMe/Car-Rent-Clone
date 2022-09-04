@@ -142,7 +142,7 @@ nav {
   .header-icons .icons__container {
     border: 1px solid rgba(195, 212, 233, 0.4);
     border-radius: 50%;
-    padding: 13px 18px;
+    padding: 13px 15px;
     position: relative; }
     .header-icons .icons__container i {
       color: #596780; }
@@ -435,6 +435,9 @@ footer {
   padding: 40px 0px !important; }
   .home-nav h2 {
     margin-left: 0; }
+
+.items__container-home {
+  padding: 13px 17px !important; }
 
 .payment-container {
   display: flex;
