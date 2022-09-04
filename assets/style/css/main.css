@@ -60,7 +60,8 @@ p, h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     padding: 0px 12px;
-    margin-top: 64px; }
+    margin-top: 64px;
+    height: 72px; }
   .card-icons {
     margin-top: 66px;
     display: flex;
@@ -95,6 +96,7 @@ p, h1, h2, h3, h4, h5, h6 {
     .card .card-image-icon_wrapper .card-image {
       margin-top: 0; }
       .card .card-image-icon_wrapper .card-image img {
+        object-fit: contain;
         width: 142px; }
     .card .card-image-icon_wrapper .card-icons {
       margin-top: 0;
