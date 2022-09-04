@@ -16,7 +16,9 @@
 <body>
     <header>
         <nav>
-            <h2>MORENT</h2>
+            <a href="index.html">
+                <h2>MORENT</h2>
+            </a>
             <div class="header-icons">
                 <div class="icons__container">
                     <i class="fa-solid fa-heart"></i>
@@ -42,7 +44,7 @@
                     </div>
                     <span>Step 1 of 4</span>
                 </div>
-                <div class="payment-card__info">
+                <div class="payment-card__info" id="billing">
                     <label for="name">
                         <span>Name</span>
                         <input id="name" type="text" name="name" placeholder="Your name"/>
@@ -61,7 +63,7 @@
                     </label>
                 </div>
             </div>
-            <div class="payment-card">
+            <div class="payment-card" id="rental-selects">
                 <div class="payment-card__head">
                     <div>
                         <h3>Rental Info</h3>
@@ -79,21 +81,23 @@
                         <span>Locations</span>
                         <i class="fa-solid fa-angle-down"></i>
                         <select id="locations-pick" name="locations-pick">
-                            <option>Select your city</option>
+                            <option value="">Select your city</option>
+                            <option value="baku">Baku</option>
+                            <option value="new-york">New-York</option>
                         </select>
                     </label>
                     <label for="date-pick">
                         <span>Date</span>
                         <i class="fa-solid fa-angle-down"></i>
-                        <select id="date-pick" name="date-pick">
-                            <option>Select your date</option>
-                        </select>
+                        <input type="text" name="date-pick" id="date-pick" placeholder="Select your date"/>
                     </label>
                     <label for="time-pick">
                         <span>Time</span>
                         <i class="fa-solid fa-angle-down"></i>
                         <select id="time-pick" name="time-pick">
-                            <option>Select your time</option>
+                            <option value="">Select your time</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
                         </select>
                     </label>
                 </div>
@@ -107,26 +111,28 @@
                         <span>Locations</span>
                         <i class="fa-solid fa-angle-down"></i>
                         <select id="locations-drop" name="locations-drop">
-                            <option>Select your city</option>
+                            <option value="">Select your city</option>
+                            <option value="baku">Baku</option>
+                            <option value="new-york">New-York</option>
                         </select>
                     </label>
                     <label for="date-drop">
                         <span>Date</span>
                         <i class="fa-solid fa-angle-down"></i>
-                        <select id="date-drop" name="date-drop">
-                            <option>Select your date</option>
-                        </select>
+                        <input type="text" name="date-drop" id="date-drop" placeholder="Select your date"/>
                     </label>
                     <label for="time-drop">
                         <span>Time</span>
                         <i class="fa-solid fa-angle-down"></i>
                         <select id="time-drop" name="time-drop">
-                            <option>Select your time</option>
+                            <option value="">Select your time</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
                         </select>
                     </label>
                 </div>
             </div>
-            <div class="payment-card">
+            <div class="payment-card multiple-payment-card">
                 <div class="payment-card__head">
                     <div>
                         <h3>Payment Method</h3>
@@ -134,49 +140,97 @@
                     </div>
                     <span>Step 3 of 4</span>
                 </div>
+                <!--                -->
+                <!--        #### BANK CARD        -->
+                <!--                -->
+                <!--                -->
                 <div class="credit-card">
                     <div class="credit-card__type">
                         <div>
-                            <img src="./assets/media/payment/pickUpMark.svg"/>
+                            <input type="radio" name="card-type" checked="true" data-value = "bank"/>
                             <span>Credit Card</span>
                         </div>
                         <img src="assets/media/payment/visa.png">
                     </div>
-                    <div class="payment-card__info">
-                        <label for="cardNumber">
+                    <div class="payment-card__info "  data-value = "bank">
+                        <label for="bank-cardNumber">
                             <span>Card Number</span>
-                            <input id="cardNumber" type="text" name="cardNumber" placeholder="Card number"/>
+                            <input id="bank-cardNumber" type="text" name="cardNumber" placeholder="Card number"/>
                         </label>
-                        <label for="number">
+                        <label for="bank-exprationDate">
                             <span>Expration Date</span>
-                            <input id="exprationDate" type="text" name="exprationDate" placeholder="DD / MM / YY"/>
+                            <input id="bank-exprationDate" type="text" name="exprationDate" placeholder="DD / MM / YY"/>
                         </label>
-                        <label for="cardHolder">
+                        <label for="bank-cardHolder">
                             <span>Card Holder</span>
-                            <input id="cardHolder" type="text" name="cardHolder" placeholder="Card holder"/>
+                            <input id="bank-cardHolder" type="text" name="cardHolder" placeholder="Card holder"/>
                         </label>
-                        <label for="cvc">
+                        <label for="bank-cvc">
                             <span>CVC</span>
-                            <input id="cvc" type="text" name="cvc" placeholder="CVC"/>
+                            <input id="bank-cvc" type="text" name="cvc" placeholder="CVC"/>
                         </label>
                     </div>
                 </div>
+                <!--                -->
+                <!--        #### PAYPAL        -->
+                <!--                -->
+                <!--                -->
                 <div class="credit-card">
                     <div class="credit-card__type">
                         <div>
-                            <input type="radio" name="card-type"/>
+                            <input type="radio" name="card-type" data-value = "paypal" />
                             <span>PayPal</span>
                         </div>
                         <img src="assets/media/payment/payPal.png">
                     </div>
+                    <div class="payment-card__info" data-value = "paypal">
+                        <label for="paypal-cardNumber">
+                            <span>Card Number</span>
+                            <input id="paypal-cardNumber" type="text" name="cardNumber" placeholder="Card number"/>
+                        </label>
+                        <label for="paypal-exprationDate">
+                            <span>Expration Date</span>
+                            <input id="paypal-exprationDate" type="text" name="exprationDate" placeholder="DD / MM / YY"/>
+                        </label>
+                        <label for="paypal-cardHolder">
+                            <span>Card Holder</span>
+                            <input id="paypal-cardHolder" type="text" name="cardHolder" placeholder="Card holder"/>
+                        </label>
+                        <label for="paypal-cvc">
+                            <span>CVC</span>
+                            <input id="paypal-cvc" type="text" name="cvc" placeholder="CVC"/>
+                        </label>
+                    </div>
                 </div>
+                <!--                -->
+                <!--        #### BITCOIN        -->
+                <!--                -->
+                <!--                -->
                 <div class="credit-card">
                     <div class="credit-card__type">
                         <div>
-                            <input type="radio" name="card-type"/>
+                            <input type="radio" name="card-type" data-value = "coin"/>
                             <span>Bitcoin</span>
                         </div>
                         <img src="assets/media/payment/bitCoin.png">
+                    </div>
+                    <div class="payment-card__info" data-value = "coin">
+                        <label for="coin-cardNumber">
+                            <span>Card Number</span>
+                            <input id="coin-cardNumber" type="text" name="cardNumber" placeholder="Card number"/>
+                        </label>
+                        <label for="coin-exprationDate">
+                            <span>Expration Date</span>
+                            <input id="coin-exprationDate" type="text" name="exprationDate" placeholder="DD / MM / YY"/>
+                        </label>
+                        <label for="coin-cardHolder">
+                            <span>Card Holder</span>
+                            <input id="coin-cardHolder" type="text" name="cardHolder" placeholder="Card holder"/>
+                        </label>
+                        <label for="coin-cvc">
+                            <span>CVC</span>
+                            <input id="coin-cvc" type="text" name="cvc" placeholder="CVC"/>
+                        </label>
                     </div>
                 </div>
             </div>
@@ -191,16 +245,8 @@
                 <div class="credit-card">
                     <div class="credit-card__type">
                         <div>
-                            <input type="checkbox"/>
+                            <input type="checkbox" id="agreement"/>
                             <span>I agree with sending an Marketing and newsletter emails. No spam, promissed!</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="credit-card">
-                    <div class="credit-card__type">
-                        <div>
-                            <input type="checkbox"/>
-                            <span>I agree with our terms and conditions and privacy policy.</span>
                         </div>
                     </div>
                 </div>
@@ -265,7 +311,9 @@
     <footer>
         <div class="footer__top">
             <div class="footer-top__left">
-                <h2>MORENT</h2>
+                <a href="index.html">
+                    <h2>MORENT</h2>
+                </a>
                 <p>Our vision is to provide convenience and help increase your sales business.</p>
             </div>
             <div class="footer-top__right">

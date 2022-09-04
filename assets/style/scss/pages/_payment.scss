@@ -142,6 +142,12 @@
     }
   }
 
+  .multiple-payment-card{
+    .payment-card__info{
+      display: none;
+    }
+  }
+
   .credit-card{
     background: $main-background-color;
     border-radius: 10px;
@@ -250,7 +256,7 @@
           background: $main-background-color;
           border: none;
           border-radius: 10px;
-          padding: 16px 32px;
+          padding: 16px 90px 16px 32px;
           width: 100%;
         }
 
@@ -305,6 +311,7 @@
 
       span{
         @include paymentSpan(500, 12px, $secondary-light-300);
+
       }
     }
 
@@ -410,4 +417,7 @@
     }
   }
 }
+
+
+
 
