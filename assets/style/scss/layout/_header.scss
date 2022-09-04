@@ -4,14 +4,15 @@ nav{
   padding: 40px 32px;
   align-items: center;
   background-color: white;
-}
-h2{
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 150%;
-  letter-spacing: -0.03em;
-  color: $primary-default-500;
-  margin-left: 28px;
+
+  h2{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    color: $primary-default-500;
+    margin-left: 28px;
+  }
 }
 
 .header-icons{
