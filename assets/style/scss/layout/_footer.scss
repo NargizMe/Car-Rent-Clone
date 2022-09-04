@@ -126,4 +126,8 @@ footer{
       font-size: 12px;
     }
   }
+
+  .footer__list:nth-child(2){
+    order: 1;
+  }
 }
