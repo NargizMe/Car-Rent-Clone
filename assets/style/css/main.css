@@ -496,9 +496,42 @@ footer .footer__bottom {
   color: #90A3BF;
 }
 
+#detail_header {
+  margin: 0 auto;
+  max-width: 1625px;
+}
+
+.detail_header__filter {
+  position: relative;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail_header__filter input {
+  width: 492px;
+  height: 44px;
+  border-radius: 70px;
+  padding: 12px 67px;
+  border: 1px solid rgba(195, 212, 233, 0.4);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #596780;
+}
+.detail_header__filter__search {
+  position: absolute;
+  left: 22px;
+}
+.detail_header__filter__filter {
+  position: absolute;
+  right: 22px;
+}
+
 .detail__main {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: flex-start;
   width: 100%;
   position: relative;
@@ -506,6 +539,7 @@ footer .footer__bottom {
 
 .detail__aside {
   max-width: 25%;
+  max-width: 325px;
   height: 100%;
   flex-grow: 1;
   border-right: 1px solid #F3F5F7;
@@ -578,6 +612,7 @@ footer .footer__bottom {
 .detail__container {
   height: 100%;
   max-width: 75%;
+  max-width: 1300px;
   flex-grow: 1;
   background-color: #f6f7f9;
   padding: 32px;
@@ -607,6 +642,7 @@ footer .footer__bottom {
   background: #3563e9;
   background-image: url("../../detailImgs/CarSliderArrow&&Carbg.png");
   background-size: cover;
+  background-position: bottom;
   background-repeat: no-repeat;
   border-radius: 10px;
   margin-bottom: 24px;
@@ -814,6 +850,7 @@ footer .footer__bottom {
 }
 #detail_reviews {
   margin-top: 58px;
+  margin-bottom: 42px;
   background: #FFFFFF;
   padding: 24px;
   border-radius: 10px;
@@ -923,4 +960,60 @@ footer .footer__bottom {
   background: none;
   margin: 24px auto 0 auto;
   cursor: pointer;
+}
+
+.detail__main .popular-car-title__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.detail__main .popular-car-title__row span {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20.16px;
+  color: #90A3BF;
+}
+.detail__main .popular-car-title__row a {
+  color: #3563E9;
+  font-weight: 600;
+  line-height: 20.16px;
+  text-decoration: none;
+}
+@media (max-width: 576px) {
+  .detail__main .popular-cars__row {
+    display: flex;
+    flex-wrap: nowrap !important;
+    overflow-x: scroll;
+  }
+}
+.detail__main .recommended-car_row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.detail__main .recommended-car_row span {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20.16px;
+  color: #90A3BF;
+}
+.detail__main .recommended-car_row a {
+  color: #3563E9;
+  font-weight: 600;
+  line-height: 20.16px;
+  text-decoration: none;
+}
+.detail__main .showmore-row {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.detail__main .showmore-row span {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 500;
+  line-height: 21px;
+  color: #90A3BF;
 }/*# sourceMappingURL=main.css.map */
