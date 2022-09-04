@@ -246,6 +246,8 @@ footer {
   footer {
     padding: 24px;
     background-color: transparent; }
+    footer h2 {
+      font-size: 24px; }
   .footer__top .footer-top__left {
     width: 100%; }
     .footer__top .footer-top__left p {

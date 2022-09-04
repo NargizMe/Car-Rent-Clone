@@ -113,8 +113,6 @@ function  checkValidation(){
                     window.scrollTo(0, 850);
                 }
             })
-
-
         }
         else{
             alert('You must accept the agreement');
