@@ -128,12 +128,13 @@ nav {
   align-items: center;
   background-color: white; }
 
-h2 {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 150%;
-  letter-spacing: -0.03em;
-  color: #3563E9; }
+  nav h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    color: #3563E9;
+    margin-left: 28px; }
 
 .header-icons {
   display: flex;
@@ -152,11 +153,11 @@ h2 {
       top: 0; }
 
 @media (max-width: 576px) {
-  h2 {
-    margin: 0;
-    font-size: 24px; }
   nav {
     padding: 32px 25px; }
+    nav h2 {
+      margin: 0;
+      font-size: 24px; }
     nav .icons__container {
       display: none; }
     nav img {
@@ -167,7 +168,12 @@ footer {
   padding: 80px 60px 60px 60px;
   background-color: white; }
   footer h2 {
-    margin-left: 0; }
+    margin-left: 0;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    color: #3563E9; }
   footer .footer__top {
     display: flex;
     justify-content: space-between;
@@ -333,13 +339,20 @@ footer {
         border-right: 1px solid #C3D4E9; }
       .app__main #app__main__pickdrop .app__main__pickdrop--pick .inputWrap {
         position: relative; }
+
+      .app__main #app__main__pickdrop .app__main__pickdrop--pick label {
+        font-weight: 600;
+        color: #1A202C; }
+
       .app__main #app__main__pickdrop .app__main__pickdrop--pick span {
         font-weight: 700;
         font-size: 16px;
         line-height: 24px;
         color: #1A202C; }
+
       .app__main #app__main__pickdrop .app__main__pickdrop--pick img {
         margin-right: 8px; }
+
       .app__main #app__main__pickdrop .app__main__pickdrop--pick select, .app__main #app__main__pickdrop .app__main__pickdrop--pick label {
         width: 100%;
         font-size: 12px;
@@ -350,11 +363,13 @@ footer {
         background: none;
         margin: -5px;
         cursor: pointer; }
+
       .app__main #app__main__pickdrop .app__main__pickdrop--pick .pickUp-span {
         font-weight: 600;
         color: #1A202C; }
       .app__main #app__main__pickdrop .app__main__pickdrop--pick .pickUpMark-wrapper {
         margin-bottom: 18px; }
+
       .app__main #app__main__pickdrop .app__main__pickdrop--pick #pickDateInput, .app__main #app__main__pickdrop .app__main__pickdrop--pick #pickTimeInput, .app__main #app__main__pickdrop .app__main__pickdrop--pick #dropDateInput, .app__main #app__main__pickdrop .app__main__pickdrop--pick #dropTimeInput {
         visibility: hidden;
         opacity: 0;
