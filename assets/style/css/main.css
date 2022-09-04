@@ -189,7 +189,7 @@ footer {
   row-gap: 50px;
   flex-wrap: wrap; }
   .footer__top .footer-top__right .footer__list {
-    width: 152px; }
+    width: 132px; }
     .footer__top .footer-top__right .footer__list h3 {
       font-weight: 600;
       font-size: 20px;
@@ -200,12 +200,14 @@ footer {
     .footer__top .footer-top__right .footer__list ul {
       display: flex;
       flex-direction: column;
-      row-gap: 25px; }
+      row-gap: 25px;
+      padding: 0; }
       .footer__top .footer-top__right .footer__list ul li {
         font-weight: 500;
         font-size: 16px;
         line-height: 150%;
         letter-spacing: -0.02em;
+        cursor: pointer;
         color: rgba(19, 19, 19, 0.6); }
 
 .footer__bottom {
@@ -301,7 +303,112 @@ footer {
       background-color: #54A6FF; }
     .app__main #app__main__hero .ads--2 {
       background-color: #3563E9; }
-
+  .app__main #app__main__pickdrop {
+    padding-bottom: 42px; }
+    @media (max-width: 576px) {
+      .app__main #app__main__pickdrop .pick__up {
+        margin-bottom: 32px; } }
+    .app__main #app__main__pickdrop .pick-drop-row {
+      position: relative; }
+    .app__main #app__main__pickdrop .app__main__pickdrop--pick {
+      padding: 24px 48px 28px 48px;
+      background-color: white;
+      border-radius: 10px; }
+      @media (max-width: 576px) {
+        .app__main #app__main__pickdrop .app__main__pickdrop--pick {
+          padding: 16px; } }
+      .app__main #app__main__pickdrop .app__main__pickdrop--pick .form-check {
+        margin-bottom: 16px; }
+      .app__main #app__main__pickdrop .app__main__pickdrop--pick .location__date {
+        border-right: 1px solid #C3D4E9; }
+      .app__main #app__main__pickdrop .app__main__pickdrop--pick .inputWrap {
+        position: relative; }
+      .app__main #app__main__pickdrop .app__main__pickdrop--pick label {
+        font-weight: 600;
+        color: #1A202C; }
+      .app__main #app__main__pickdrop .app__main__pickdrop--pick span {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #1A202C; }
+      .app__main #app__main__pickdrop .app__main__pickdrop--pick select, .app__main #app__main__pickdrop .app__main__pickdrop--pick label {
+        width: 100%;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 15.12px;
+        color: #90A3BF;
+        border: none;
+        background: none;
+        margin: -5px;
+        cursor: pointer; }
+      .app__main #app__main__pickdrop .app__main__pickdrop--pick #pickDateInput, .app__main #app__main__pickdrop .app__main__pickdrop--pick #pickTimeInput, .app__main #app__main__pickdrop .app__main__pickdrop--pick #dropDateInput, .app__main #app__main__pickdrop .app__main__pickdrop--pick #dropTimeInput {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        position: absolute;
+        right: 0;
+        top: 0; }
+    .app__main #app__main__pickdrop .shuffle-btn-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .app__main #app__main__pickdrop .shuffle-btn-wrapper button {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+        padding: 27px 21px; }
+        .app__main #app__main__pickdrop .shuffle-btn-wrapper button i {
+          display: block; }
+      @media (max-width: 576px) {
+        .app__main #app__main__pickdrop .shuffle-btn-wrapper {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%); } }
+  .app__main #app__main__popular-cars .popular-car-title__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px; }
+    .app__main #app__main__popular-cars .popular-car-title__row span {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20.16px;
+      color: #90A3BF; }
+    .app__main #app__main__popular-cars .popular-car-title__row a {
+      color: #3563E9;
+      font-weight: 600;
+      line-height: 20.16px; }
+  @media (max-width: 576px) {
+    .app__main #app__main__popular-cars .popular-cars__row {
+      display: flex;
+      flex-wrap: nowrap !important;
+      overflow-x: scroll; } }
+  .app__main #app__main__recommended-cars {
+    padding-top: 12px;
+    padding-bottom: 64px; }
+    .app__main #app__main__recommended-cars .recommended-car_row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px; }
+      .app__main #app__main__recommended-cars .recommended-car_row span {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20.16px;
+        color: #90A3BF; }
+      .app__main #app__main__recommended-cars .recommended-car_row a {
+        color: #3563E9;
+        font-weight: 600;
+        line-height: 20.16px; }
+    .app__main #app__main__recommended-cars .showmore-row {
+      display: flex;
+      justify-content: center;
+      position: relative; }
+      .app__main #app__main__recommended-cars .showmore-row span {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 500;
+        line-height: 21px;
+        color: #90A3BF; }
 
 .payment-container {
   display: flex;
@@ -615,110 +722,3 @@ footer {
         color: #1A202C; }
     .payment-container .payment-container__right .rental-info .rental-info__bottom .rental-car__price {
       font-size: 20px; } }
-
-  .app__main #app__main__pickdrop {
-    padding-bottom: 42px; }
-    @media (max-width: 576px) {
-      .app__main #app__main__pickdrop .pick__up {
-        margin-bottom: 32px; } }
-    .app__main #app__main__pickdrop .pick-drop-row {
-      position: relative; }
-    .app__main #app__main__pickdrop .app__main__pickdrop--pick {
-      padding: 24px 48px 28px 48px;
-      background-color: white;
-      border-radius: 10px; }
-      @media (max-width: 576px) {
-        .app__main #app__main__pickdrop .app__main__pickdrop--pick {
-          padding: 16px; } }
-      .app__main #app__main__pickdrop .app__main__pickdrop--pick .form-check {
-        margin-bottom: 16px; }
-      .app__main #app__main__pickdrop .app__main__pickdrop--pick .location__date {
-        border-right: 1px solid #C3D4E9; }
-      .app__main #app__main__pickdrop .app__main__pickdrop--pick .inputWrap {
-        position: relative; }
-      .app__main #app__main__pickdrop .app__main__pickdrop--pick label {
-        font-weight: 600;
-        color: #1A202C; }
-      .app__main #app__main__pickdrop .app__main__pickdrop--pick span {
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 24px;
-        color: #1A202C; }
-      .app__main #app__main__pickdrop .app__main__pickdrop--pick select, .app__main #app__main__pickdrop .app__main__pickdrop--pick label {
-        width: 100%;
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 15.12px;
-        color: #90A3BF;
-        border: none;
-        background: none;
-        margin: -5px;
-        cursor: pointer; }
-      .app__main #app__main__pickdrop .app__main__pickdrop--pick #pickDateInput, .app__main #app__main__pickdrop .app__main__pickdrop--pick #pickTimeInput, .app__main #app__main__pickdrop .app__main__pickdrop--pick #dropDateInput, .app__main #app__main__pickdrop .app__main__pickdrop--pick #dropTimeInput {
-        visibility: hidden;
-        opacity: 0;
-        height: 0;
-        position: absolute;
-        right: 0;
-        top: 0; }
-    .app__main #app__main__pickdrop .shuffle-btn-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-      .app__main #app__main__pickdrop .shuffle-btn-wrapper button {
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
-        padding: 27px 21px; }
-        .app__main #app__main__pickdrop .shuffle-btn-wrapper button i {
-          display: block; }
-      @media (max-width: 576px) {
-        .app__main #app__main__pickdrop .shuffle-btn-wrapper {
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%); } }
-  .app__main #app__main__popular-cars .popular-car-title__row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px; }
-    .app__main #app__main__popular-cars .popular-car-title__row span {
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 20.16px;
-      color: #90A3BF; }
-    .app__main #app__main__popular-cars .popular-car-title__row a {
-      color: #3563E9;
-      font-weight: 600;
-      line-height: 20.16px; }
-  @media (max-width: 576px) {
-    .app__main #app__main__popular-cars .popular-cars__row {
-      display: flex;
-      flex-wrap: nowrap !important;
-      overflow-x: scroll; } }
-  .app__main #app__main__recommended-cars {
-    padding-top: 12px;
-    padding-bottom: 64px; }
-    .app__main #app__main__recommended-cars .recommended-car_row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 30px; }
-      .app__main #app__main__recommended-cars .recommended-car_row span {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 20.16px;
-        color: #90A3BF; }
-      .app__main #app__main__recommended-cars .recommended-car_row a {
-        color: #3563E9;
-        font-weight: 600;
-        line-height: 20.16px; }
-    .app__main #app__main__recommended-cars .showmore-row {
-      display: flex;
-      justify-content: center;
-      position: relative; }
-      .app__main #app__main__recommended-cars .showmore-row span {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        font-weight: 500;
-        line-height: 21px;
-        color: #90A3BF; }
