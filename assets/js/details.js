@@ -18,3 +18,30 @@ function removeSelectFromAllOptionSlides() {
     slide.classList.remove("selecedSlide");
   });
 }
+//////
+document.querySelector("#navHaburgerBtn").addEventListener("click",function (e) {  
+  if (document.querySelector(".detail__aside").style.display == "block") {
+    document.querySelector(".detail__aside").style.display = "none"
+    document.querySelector(".detail__aside").style.width = "0"
+    return
+  }
+  document.querySelector(".detail__aside").style.display = "block"
+  document.querySelector(".detail__aside").style.width = "300px"
+})
+////////
+let wishListIconDet = document.querySelectorAll(".empty-heart");
+
+wishListIconDet.forEach((heart)=>{
+    heart.addEventListener("click",function(){
+        if (this.classList.contains("fa-regular")) {
+            this.classList.remove("fa-regular");
+            this.classList.add("fa-solid");
+            this.style.color = "#ED3F3F";
+        }
+        else{
+            this.classList.remove("fa-solid");
+            this.classList.add("fa-regular");
+            this.style.color = "black";
+        }
+    });
+})
